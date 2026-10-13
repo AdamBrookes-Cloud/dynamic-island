@@ -1,3 +1,4 @@
+
 import SwiftUI
 import AppKit
 
@@ -20,6 +21,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         let width: CGFloat = 600
         let height: CGFloat = 200
+        let topInset: CGFloat = 0
+    
 
         let panel = NSPanel(
             contentRect: NSRect(
@@ -49,7 +52,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             panel.setFrameOrigin(
                 NSPoint(
                     x: screen.frame.midX - width / 2,
-                    y: screen.frame.maxY - height
+                    y: screen.frame.maxY - height - topInset
                 )
             )
         }
